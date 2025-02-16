@@ -58,6 +58,7 @@ if user_password == CORRECT_PASSWORD:
 else:
     print("Access denied")
 
+
 #################
 #4 Basketball 
 
@@ -74,5 +75,27 @@ print(f"Your shooting percentage is {value:.1f}%")
 # Encourage if shooting percentage is 80% or higher
 if value >= 80:
     print("That's great!")
+
+
+############
+# 5. Rock of Ages (Determining an Age Group)
+
+age = int(input("Enter your current age: "))
+
+# Check for invalid age using a compound Boolean expression
+if age < 0 or age > 120:
+    print("The age is Invalid")
+else:
+    # Determine age category
+    if age < 16:
+        print("You are a child. Enjoy your childhood!")
+    elif age < 21:
+        print("You are a teenager. Embrace your youth!")
+    elif age < 36:
+        print("You are a young adult. Chase your dreams!")
+    elif age < 60:
+        print("You are an adult. Keep pushing forward!")
+    else:
+        print("You are a senior citizen. Enjoy your life and relax!")
 
 
