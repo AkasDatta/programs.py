@@ -1,22 +1,18 @@
 # Constants for tax rates and thresholds
-TAX_RATE_LOW = 0.02  # 2% for income between $100 and $500
-TAX_RATE_MEDIUM = 0.05  # 5% for income between $500 and $1000
-TAX_RATE_HIGH = 0.1  # 10% for income above $1000
+TAX_RATE_LOW = 0.02 
+TAX_RATE_MEDIUM = 0.05 
+TAX_RATE_HIGH = 0.1
 
 LOW_THRESHOLD = 100
 MEDIUM_THRESHOLD = 500
 HIGH_THRESHOLD = 1000
 
-# Program Title
 print("Python Party Tax Program - Tax Simplified")
 
-# Take input from the  user
 income = float(input("Enter your income: $"))
 
-# Initialize total tax to 0
-total_tax = 0.0   # That's Default (for incomes below $100)
+total_tax = 0.0   
 
-# Calculate tax based on income
 if income <= LOW_THRESHOLD:
     total_tax = 0
 elif income <= MEDIUM_THRESHOLD:
@@ -28,10 +24,8 @@ else:
                 (HIGH_THRESHOLD - MEDIUM_THRESHOLD) * TAX_RATE_MEDIUM + \
                 (income - HIGH_THRESHOLD) * TAX_RATE_HIGH
 
-# Calculate take-home pay
 take_home_pay = income - total_tax
 
-#  Output the total and take-home pay
 print("Total tax is: $", total_tax, sep="")
 print("Take home pay is: $", take_home_pay, sep="")
 
@@ -62,17 +56,13 @@ else:
 #################
 #4 Basketball 
 
-# Get user input
 shots_attempted = int(input("Number of shots attempted: "))
 shots_made = int(input("Number of shots made: "))
 
-# Calculate shooting percentage
 value = (shots_attempted  / shots_made) * 100
 
-# Display shooting percentage with one decimal place
 print(f"Your shooting percentage is {value:.1f}%")
 
-# Encourage if shooting percentage is 80% or higher
 if value >= 80:
     print("That's great!")
 
@@ -82,11 +72,9 @@ if value >= 80:
 
 age = int(input("Enter your current age: "))
 
-# Check for invalid age using a compound Boolean expression
 if age < 0 or age > 120:
     print("The age is Invalid")
 else:
-    # Determine age category
     if age < 16:
         print("You are a child. Enjoy your childhood!")
     elif age < 21:
@@ -103,7 +91,6 @@ else:
 ###################
 # 6. Speeding Fines Calculation
 
-# Function to calculate fine based on speed over the limit
 def calculate_fine(speed_over_limit):
     if speed_over_limit <= 10:
         return 309
@@ -116,11 +103,9 @@ def calculate_fine(speed_over_limit):
     else:
         return 1780
 
-# Inputs
 speed = int(input("Please enter your speed (km/h): "))
 speed_limit = int(input("Enter the speed limit (km/h): "))
 
-# Calculate speed over the limit
 speed_over_limit = speed - speed_limit
 
 if speed_over_limit <= 0:
