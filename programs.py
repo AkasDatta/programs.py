@@ -99,3 +99,33 @@ else:
         print("You are a senior citizen. Enjoy your life and relax!")
 
 
+
+###################
+# 6. Speeding Fines Calculation
+
+# Function to calculate fine based on speed over the limit
+def calculate_fine(speed_over_limit):
+    if speed_over_limit <= 10:
+        return 309
+    elif speed_over_limit <= 20:
+        return 464
+    elif speed_over_limit <= 30:
+        return 696
+    elif speed_over_limit <= 40:
+        return 1161
+    else:
+        return 1780
+
+# Inputs
+speed = int(input("Please enter your speed (km/h): "))
+speed_limit = int(input("Enter the speed limit (km/h): "))
+
+# Calculate speed over the limit
+speed_over_limit = speed - speed_limit
+
+if speed_over_limit <= 0:
+    print("You are within the speed limit. Please drive safely!")
+else:
+    fine_amount = calculate_fine(speed_over_limit)
+    print(f"You were speeding! Your fine is: ${fine_amount}")
+
