@@ -57,3 +57,22 @@ if user_password == CORRECT_PASSWORD:
     print("Access granted")
 else:
     print("Access denied")
+
+#################
+#4 Basketball 
+
+# Get user input
+shots_attempted = int(input("Number of shots attempted: "))
+shots_made = int(input("Number of shots made: "))
+
+# Calculate shooting percentage
+value = (shots_attempted  / shots_made) * 100
+
+# Display shooting percentage with one decimal place
+print(f"Your shooting percentage is {value:.1f}%")
+
+# Encourage if shooting percentage is 80% or higher
+if value >= 80:
+    print("That's great!")
+
+
