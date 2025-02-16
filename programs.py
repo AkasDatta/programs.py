@@ -90,18 +90,6 @@ else:
 
 # 6. Speeding Fines
 
-def calculate_fine(speed_over_limit):
-    if speed_over_limit <= 10:
-        return 309
-    elif speed_over_limit <= 20:
-        return 464
-    elif speed_over_limit <= 30:
-        return 696
-    elif speed_over_limit <= 40:
-        return 1161
-    else:
-        return 1780
-
 speed = int(input("Please enter your speed (km/h): "))
 speed_limit = int(input("Enter the speed limit (km/h): "))
 
@@ -110,6 +98,17 @@ speed_over_limit = speed - speed_limit
 if speed_over_limit <= 0:
     print("You are within the speed limit. Please drive safely!")
 else:
-    fine_amount = calculate_fine(speed_over_limit)
+    if speed_over_limit <= 10:
+        fine_amount = 309
+    elif speed_over_limit <= 20:
+        fine_amount = 464
+    elif speed_over_limit <= 30:
+        fine_amount = 696
+    elif speed_over_limit <= 40:
+        fine_amount = 1161
+    else:
+        fine_amount = 1780
+    
     print(f"You were speeding! Your fine is: ${fine_amount}")
+
 
