@@ -1,29 +1,36 @@
-################## 1. Tax Program
+# Constants for tax rates and thresholds
+TAX_RATE_LOW = 0.02  # 2% for income between $100 and $500
+TAX_RATE_MEDIUM = 0.05  # 5% for income between $500 and $1000
+TAX_RATE_HIGH = 0.1  # 10% for income above $1000
 
-tax_low = 0.02  ### 2% for income $(100-500)
-tax_medium = 0.05  # 5% for income $(500-1000)
-tax_high = 0.1  # 10% for income above $1000
+LOW_THRESHOLD = 100
+MEDIUM_THRESHOLD = 500
+HIGH_THRESHOLD = 1000
 
-low_limit = 100
-mid_limit = 500
-high_limit = 1000
-
+# Program Title
 print("Python Party Tax Program - Tax Simplified")
+
+# Take input from the  user
 income = float(input("Enter your income: $"))
 
-# Calculate tax
-if income < low_limit:
-    tax = 0
-elif income <= mid_limit:
-    tax = (income - low_limit) * tax_low
-elif income <= high_limit:
-    tax = (mid_limit - low_limit) * tax_low + (income - mid_limit) * tax_medium
+# Initialize total tax to 0
+total_tax = 0.0   # That's Default (for incomes below $100)
+
+# Calculate tax based on income
+if income <= LOW_THRESHOLD:
+    total_tax = 0
+elif income <= MEDIUM_THRESHOLD:
+    total_tax = (income - LOW_THRESHOLD) * TAX_RATE_LOW
+elif income <= HIGH_THRESHOLD:
+    total_tax = (MEDIUM_THRESHOLD - LOW_THRESHOLD) * TAX_RATE_LOW + (income - MEDIUM_THRESHOLD) * TAX_RATE_MEDIUM
 else:
-    tax = (mid_limit - low_limit) * tax_low + (high_limit - mid_limit) * tax_medium + (income - high_limit) * tax_high
+    total_tax = (MEDIUM_THRESHOLD - LOW_THRESHOLD) * TAX_RATE_LOW + \
+                (HIGH_THRESHOLD - MEDIUM_THRESHOLD) * TAX_RATE_MEDIUM + \
+                (income - HIGH_THRESHOLD) * TAX_RATE_HIGH
 
 # Calculate take-home pay
-take_home_pay = income - tax
+take_home_pay = income - total_tax
 
-# Display results
-print("Total tax: $", tax, sep="")
-print("Take home pay: $", take_home_pay, sep="")
+#  Output the total and take-home pay
+print("Total tax is: $", total_tax, sep="")
+print("Take home pay is: $", take_home_pay, sep="")
