@@ -9,9 +9,9 @@ LOW_THRESHOLD = 100
 MEDIUM_THRESHOLD = 500
 HIGH_THRESHOLD = 1000
 
-print("Python Party Tax Program - Tax Simplified")
+print("Python Party Tax Program")
 
-income = float(input("Enter your income: $"))
+income = float(input("Income: $"))
 
 total_tax = 0.0   
 
@@ -62,7 +62,7 @@ shots_made = int(input("Number of shots made: "))
 
 value = (shots_attempted  / shots_made) * 100
 
-print(f"Your shooting percentage is {value:.1f}%")
+print(f"Your shooting percentage {value:.1f}%")
 
 if value >= 80:
     print("That's great!")
@@ -70,10 +70,10 @@ if value >= 80:
 
 # 5. Rock of Ages
 
-age = int(input("Enter your current age: "))
+age = int(input("Your current age: "))
 
 if age < 0 or age > 120:
-    print("The age is Invalid")
+    print("Invalid age")
 else:
     if age < 16:
         print("You are a child. Enjoy your childhood!")
@@ -90,8 +90,8 @@ else:
 
 # 6. Speeding Fines
 
-speed = int(input("Please enter your speed (km/h): "))
-speed_limit = int(input("Enter the speed limit (km/h): "))
+speed = int(input("Your speed (km/h): "))
+speed_limit = int(input("Speed limit (km/h): "))
 
 speed_over_limit = speed - speed_limit
 
