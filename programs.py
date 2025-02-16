@@ -46,3 +46,14 @@ else:
     print("Insurance not required")
 
 
+################
+### 3. Simple Password Checker
+
+CORRECT_PASSWORD = "Jahid"
+
+user_password = input("Enter your password: ")
+
+if user_password == CORRECT_PASSWORD:
+    print("Access granted")
+else:
+    print("Access denied")
