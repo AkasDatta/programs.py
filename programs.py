@@ -1,4 +1,6 @@
-# Constants for tax rates and thresholds
+
+# 1. Tax
+
 TAX_RATE_LOW = 0.02 
 TAX_RATE_MEDIUM = 0.05 
 TAX_RATE_HIGH = 0.1
@@ -30,7 +32,7 @@ print("Total tax is: $", total_tax, sep="")
 print("Take home pay is: $", take_home_pay, sep="")
 
 
-################## 2. Car Insurance
+# 2. Car Insurance
 age = int(input("Enter your age: "))
 if age < 18:
     print("Hire refused")
@@ -40,8 +42,7 @@ else:
     print("Insurance not required")
 
 
-################
-### 3. Simple Password Checker
+# 3. Simple Password Checker
 
 CORRECT_PASSWORD = "Jahid"
 
@@ -53,8 +54,8 @@ else:
     print("Access denied")
 
 
-#################
-#4 Basketball 
+
+# 4. Basketball
 
 shots_attempted = int(input("Number of shots attempted: "))
 shots_made = int(input("Number of shots made: "))
@@ -67,8 +68,7 @@ if value >= 80:
     print("That's great!")
 
 
-############
-# 5. Rock of Ages (Determining an Age Group)
+# 5. Rock of Ages
 
 age = int(input("Enter your current age: "))
 
@@ -88,8 +88,7 @@ else:
 
 
 
-###################
-# 6. Speeding Fines Calculation
+# 6. Speeding Fines
 
 def calculate_fine(speed_over_limit):
     if speed_over_limit <= 10:
