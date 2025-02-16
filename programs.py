@@ -34,3 +34,15 @@ take_home_pay = income - total_tax
 #  Output the total and take-home pay
 print("Total tax is: $", total_tax, sep="")
 print("Take home pay is: $", take_home_pay, sep="")
+
+
+################## 2. Car Insurance
+age = int(input("Enter your age: "))
+if age < 18:
+    print("Hire refused")
+elif age < 25:
+    print("Insurance required")
+else:
+    print("Insurance not required")
+
+
